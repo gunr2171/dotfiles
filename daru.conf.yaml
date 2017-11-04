@@ -17,6 +17,16 @@
     ~/scripts/bspwm:
         path: daru/bspwm/scripts
 
+# i3
+- link:
+    ~/.config/i3/config:
+        path: daru/i3/config
+
+# polybar
+- link:
+    ~/.config/polybar/config:
+        path: daru/polybar/config
+
 # sxhkd
 - link:
     ~/.config/sxhkd:

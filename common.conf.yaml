@@ -14,10 +14,20 @@
     ~/.gitconfig:
         path: common/git/.gitconfig
 
+# Gnupg
+- shell:
+    - mkdir -p "$HOME/.gnupg"
+    - cp "common/gpg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+- link:
+    ~/.gnupg/sshcontrol:
+        path: common/gpg/sshcontrol
+
 # Less
 - link:
     ~/.lesskey:
         path: common/less/.lesskey
+- shell:
+    - "lesskey"
     
 # Nano
 - link:
@@ -28,8 +38,14 @@
 
 # Ranger
 - link:
-    ~/.config/ranger:
-        path: common/ranger/.config/ranger
+    ~/.config/ranger/commands.py:
+        path: common/ranger/commands.py
+    ~/.config/ranger/scope.sh:
+        path: common/ranger/scope.sh
+    ~/.config/ranger/rifle.conf:
+        path: common/ranger/rifle.conf
+    ~/.config/ranger/rc.conf:
+        path: common/ranger/rc.conf
 
 
 # Zsh
